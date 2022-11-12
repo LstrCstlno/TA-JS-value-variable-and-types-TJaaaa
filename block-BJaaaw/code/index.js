@@ -59,8 +59,7 @@ else{
 // 5. Convert the above code using`?` terniary operator
 
 let houseNameB = prompt("What is the name of your house?");
-(houseNameB == "stark") ? alert("Winter is coming") : alert("All men must die");
-(houseNameB == "lannister") ? alert("A lannister always pays his debt") : alert("All men must die");
+(houseNameB == "stark") ? alert("Winter is coming") : (houseNameB == "lannister") ? alert("A lannister always pays his debt") :alert("All men must die");
 
 // Switch
 
@@ -69,40 +68,40 @@ let month = Number(prompt("type the number of a month"));
 switch(true)
 {
   case month == 1 : 
-    alert("It is january");
+    alert("January has 31 days");
     break;
   case month == 2 :
-    alert("it is febraury");
+    alert("febraury has 28 days");
     break;
   case month == 3 :
-    alert("it is march");
+    alert("march has 31 days");
     break;
   case month == 4 :
-    alert("it is april");
+    alert("april has 30 days");
     break;
   case month == 5 :
-    alert("it is may");
+    alert("may 31 has days");
     break;
   case month == 6 :
-    alert("it is june");
+    alert("june has 30 days");
     break;
   case month == 7 :
-    alert("it is july");
+    alert("july has 31 days");
     break;
   case month == 8 :
-    alert("it is august");
+    alert("august  has 31 days");
     break;
   case month == 9 :
-    alert("it is september");
+    alert("september has 30 days");
     break;
   case month == 10 :
-    alert("it is october");
+    alert("october has 31 days");
     break;
   case month == 11 :
-    alert("it is november");
+    alert("november has 30 days");
     break;
   case month == 12 :
-    alert("it is december");
+    alert("december has 31 days");
     break;
   default:
     alert("not a month");
