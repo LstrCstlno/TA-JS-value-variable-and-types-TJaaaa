@@ -44,11 +44,11 @@ let num4 = Number(prompt("Type another number"));
 */
 
 let houseName = prompt('What is the name of your house?');
-if(houseName = "stark")
+if(houseName == "stark")
 {
   alert("Winter is coming");
 }
-  else if(houseName = "Lannister"){
+  else if(houseName == "Lannister"){
 
   alert("A lannister always pays his debt")
 }
