@@ -23,26 +23,23 @@ const PHONE_PRICE = 99.99;
 const ACCESSORY_PRICE = 9.99;
 var amount = 0;
 const TAX_RATE = 0.08;
+const SPENDING_THRESHOLD = 200;
 
-for (let i = PHONE_PRICE; i < bank_balance; i += PHONE_PRICE) {
-    phoneTotal = i;
+while (amount < bank_balance) {
+    amount += PHONE_PRICE;
+    if (amount < SPENDING_THRESHOLD) {
+        amount += ACCESSORY_PRICE
+    }
 }
 
-totalPhones = (phoneTotal / PHONE_PRICE);
+tax = amount*TAX_RATE;
 
-accessoryTotal = (totalPhones*ACCESSORY_PRICE);
+totalAmount = tax + amount;
 
-purchaseAmount = (accessoryTotal + phoneTotal);
+alert(` the total Amount is $${totalAmount}`);
 
-totalTax = (purchaseAmount*TAX_RATE);
-
-totalAmount = (purchaseAmount + totalTax);
-
-alert(`the calculated purchase amount is $${totalAmount}`);
-
-if (totalAmount<bank_balance) {
-    alert('You can afford the phone');
+if (totalAmount>bank_balance) {
+    alert('You cannot afford the phone');
 }else{
-        alert('you cannot afford the phone');
-    }
-
+    alert("you can afford the phone");
+}
